@@ -79,6 +79,7 @@ D:\Work\PlatformService\obj\Debug\net7.0\PlatformService.genruntimeconfig.cache
 D:\Work\PlatformService\obj\Debug\net7.0\ref\PlatformService.dll
 D:\Microservices\PlatformService\bin\Debug\net7.0\appsettings.Development.json
 D:\Microservices\PlatformService\bin\Debug\net7.0\appsettings.json
+D:\Microservices\PlatformService\bin\Debug\net7.0\appsettings.Production.json
 D:\Microservices\PlatformService\bin\Debug\net7.0\PlatformService.exe
 D:\Microservices\PlatformService\bin\Debug\net7.0\PlatformService.deps.json
 D:\Microservices\PlatformService\bin\Debug\net7.0\PlatformService.runtimeconfig.json

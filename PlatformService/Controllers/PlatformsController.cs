@@ -16,15 +16,16 @@ namespace PlatformService.Controllers
         private readonly IMapper _mapper;
 
         private readonly ICommandDataClient _httpCommandDataClient;
-        private readonly IMessageBusClient _messageBusClient;
+        // private readonly IMessageBusClient _messageBusClient;
 
-        public PlatformsController(IPlatformRepo repository, IMapper mapper, ICommandDataClient httpCommandDataClient,
-                                        IMessageBusClient messageBusClient)
+        public PlatformsController(IPlatformRepo repository, IMapper mapper, ICommandDataClient httpCommandDataClient
+                                        // IMessageBusClient messageBusClient
+                                        )
         {
             _repository = repository;
             _mapper = mapper;
             _httpCommandDataClient = httpCommandDataClient;
-            _messageBusClient = messageBusClient;
+            // _messageBusClient = messageBusClient;
         }
 
         [HttpGet]
@@ -73,7 +74,7 @@ namespace PlatformService.Controllers
                 {
                     var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformReadDto);
                     platformPublishedDto.Event = "Platform_Published";
-                    _messageBusClient.PublishNewPlatform(platformPublishedDto);
+                    // _messageBusClient.PublishNewPlatform(platformPublishedDto);
                 }
                 catch (Exception ex)
                 {

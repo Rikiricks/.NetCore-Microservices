@@ -1,3 +1,4 @@
+using System.Text.Json;
 using CommandsService.Models;
 
 namespace CommandsService.Data
@@ -24,6 +25,7 @@ namespace CommandsService.Data
 
         public void CreatePlatform(Platform plat)
         {
+            Console.WriteLine($"--> Repo=>Patform: {JsonSerializer.Serialize(plat)}");
             if(plat == null)
             {
                 throw new ArgumentNullException(nameof(plat));
@@ -33,6 +35,7 @@ namespace CommandsService.Data
 
         public bool ExternalPlatformExists(int externalPlatformId)
         {
+            if(!_context.Platforms.Any()) return false;
             return _context.Platforms.Any(p => p.ExternalID == externalPlatformId);
         }
 

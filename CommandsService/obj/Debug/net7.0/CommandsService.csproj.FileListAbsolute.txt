@@ -44,3 +44,7 @@ D:\Microservices\CommandsService\obj\Debug\net7.0\CommandsService.genruntimeconf
 D:\Microservices\CommandsService\obj\Debug\net7.0\ref\CommandsService.dll
 D:\Microservices\CommandsService\bin\Debug\net7.0\appsettings.Production.json
 D:\Microservices\CommandsService\bin\Debug\net7.0\RabbitMQ.Client.dll
+D:\Microservices\CommandsService\bin\Debug\net7.0\Google.Protobuf.dll
+D:\Microservices\CommandsService\bin\Debug\net7.0\Grpc.Core.Api.dll
+D:\Microservices\CommandsService\bin\Debug\net7.0\Grpc.Net.Client.dll
+D:\Microservices\CommandsService\bin\Debug\net7.0\Grpc.Net.Common.dll

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 using PlatformService.SyncDataServices.Http;
 using PlatformService.AsyncDataServices;
+using PlatformService.SyncDataServices.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ builder.Services.AddDbContext<AppDbContext>();
 
 // if (app.Environment.IsProduction())
 //             {
-                Console.WriteLine("--> Using SqlServer Db");
+                // Console.WriteLine("--> Using SqlServer Db");
                 // builder.Services.AddDbContext<AppDbContext>(opt =>
                 //     opt.UseSqlServer("Data Source=DESKTOP-7354L29\\SQLEXPRESS;Database=platformsdb;Trusted_Connection=True;MultipleActiveResultSets=true"));
             // }
@@ -29,14 +30,18 @@ builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
-builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
+// builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddGrpc();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+//   builder.Services.AddHttpsRedirection(options =>
+//     {
+//         options.HttpsPort = 5117; // Port for HTTPS
+//     });
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -52,7 +57,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//PrepDb.PrepPopulation(app, app.Environment.IsProduction());
+app.MapGrpcService<GrpcPlatformService>();
+
+PrepDb.PrepPopulation(app, app.Environment.IsProduction());
 
 app.Run();
 

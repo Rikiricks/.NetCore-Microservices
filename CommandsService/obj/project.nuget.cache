@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "TzwTwnNJNZzNosoEsI+75M6ujei1fe2xdo4+wgdemxHKfWAG2MJ/BpMOhTFQHFzdGLMJa30TImYAgGryv4Tmpg==",
+  "dgSpecHash": "xXp6IZ9OHpEgpwaQ0FdM+VsaglWgSnusBTsUbWJ1w7NxPeWEsC96JLey/A7f6Qr1prDkTgrnALEDjTVxdEpGRQ==",
   "success": true,
   "projectFilePath": "D:\\Microservices\\CommandsService\\CommandsService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rushik\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Rushik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Rushik\\.nuget\\packages\\google.protobuf\\3.24.1\\google.protobuf.3.24.1.nupkg.sha512",
+    "C:\\Users\\Rushik\\.nuget\\packages\\grpc.core.api\\2.55.0\\grpc.core.api.2.55.0.nupkg.sha512",
+    "C:\\Users\\Rushik\\.nuget\\packages\\grpc.net.client\\2.55.0\\grpc.net.client.2.55.0.nupkg.sha512",
+    "C:\\Users\\Rushik\\.nuget\\packages\\grpc.net.common\\2.55.0\\grpc.net.common.2.55.0.nupkg.sha512",
+    "C:\\Users\\Rushik\\.nuget\\packages\\grpc.tools\\2.57.0\\grpc.tools.2.57.0.nupkg.sha512",
     "C:\\Users\\Rushik\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Rushik\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\Rushik\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
